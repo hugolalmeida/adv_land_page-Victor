@@ -1,46 +1,65 @@
+﻿import Image from "next/image";
+
 export default function Home() {
-  const whatsappNumber = "5511999999999";
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Ol%C3%A1%2C%20gostaria%20de%20orienta%C3%A7%C3%A3o%20sobre%20benef%C3%ADcio%20previdenci%C3%A1rio.`;
+  const whatsappNumber = "5524999238735";
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Olá%2C%20quero%20analisar%20meu%20caso%20previdenciário%20com%20a%20equipe.`;
 
   const beneficios = [
     "Aposentadoria",
     "BPC/LOAS",
-    "Pensao por morte",
-    "Beneficio por incapacidade",
+    "Pensão por morte",
+    "Benefício por incapacidade",
   ];
 
   const faq = [
-    "Beneficio negado: preciso fazer um novo requerimento?",
-    "O que e feito para que o INSS mude a decisao?",
-    "Ainda nao realizei meu requerimento, como faco?",
+    "Benefício negado: preciso fazer um novo requerimento?",
+    "O que é feito para tentar reverter a decisão do INSS?",
+    "Ainda não dei entrada no pedido: qual é o primeiro passo?",
   ];
 
   return (
     <main>
       <section className="hero">
-        <div className="container hero-card">
-          <p className="tagline">Escritorio Sede de Justi{"\u00e7"}a</p>
-          <h1>Bacharel Victor Hugo</h1>
-          <p className="subtitle">Sob supervisao da Dra. Rosana</p>
-          <p className="description">
-            Atuacao estrategica em Direito Previdenciario para analise de
-            negativas, revisao de beneficios e orientacao completa no processo
-            administrativo e judicial.
-          </p>
-          <a
-            className="cta-button"
-            href={whatsappLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Fale agora no WhatsApp
-          </a>
+        <div className="container hero-layout">
+          <div className="hero-card">
+            <p className="tagline">Escritório Sede de Justiça</p>
+            <h1>Bacharel Victor Hugo</h1>
+            <p className="subtitle">Atendimento previdenciário com estratégia e clareza</p>
+            <p className="supervision-note">Supervisão jurídica da Dra. Rosana</p>
+            <p className="description">
+              Se o INSS negou seu benefício ou se você ainda vai iniciar o
+              pedido, nossa equipe realiza uma análise técnica completa para
+              definir o caminho mais seguro e aumentar suas chances de êxito.
+            </p>
+            <a
+              className="cta-button"
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Solicitar análise no WhatsApp
+            </a>
+          </div>
+
+          <div className="hero-portrait-wrap">
+            <div className="portrait-shell">
+              <Image
+                src="/Victor-img-removebg-preview.png"
+                alt="Foto do Bacharel Victor Hugo"
+                width={560}
+                height={700}
+                priority
+                className="hero-portrait"
+              />
+            </div>
+            <p className="portrait-caption">Bacharel Victor Hugo</p>
+          </div>
         </div>
       </section>
 
       <section className="section-white">
         <div className="container">
-          <h2>Para qual beneficio voce precisa de ajuda?</h2>
+          <h2>Em qual benefício você precisa de apoio agora?</h2>
           <div className="benefit-grid">
             {beneficios.map((beneficio) => (
               <article key={beneficio} className="benefit-card">
@@ -51,7 +70,7 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Clique e seja atendido
+                  Falar com a equipe
                 </a>
               </article>
             ))}
@@ -62,21 +81,21 @@ export default function Home() {
       <section className="section-blue">
         <div className="container split">
           <div>
-            <h2>Casos em que atuamos no Direito Previdenciario</h2>
+            <h2>Demandas previdenciárias atendidas</h2>
             <ul>
               <li>Aposentadoria por idade</li>
-              <li>Aposentadoria por tempo de contribuicao</li>
-              <li>Aposentadoria da pessoa com deficiencia</li>
-              <li>Auxilio-doenca e beneficio por incapacidade</li>
+              <li>Aposentadoria por tempo de contribuição</li>
+              <li>Aposentadoria da pessoa com deficiência</li>
+              <li>Auxílio-doença e benefício por incapacidade</li>
             </ul>
           </div>
           <div>
-            <h2>Motivos que fazem o INSS negar beneficios</h2>
+            <h2>Principais motivos de negativa do INSS</h2>
             <ul>
-              <li>Ausencia de documentos e comprovacao insuficiente</li>
-              <li>Erro na analise administrativa do INSS</li>
-              <li>Falta de tempo de contribuicao reconhecido</li>
-              <li>Interpretacao incorreta da incapacidade laboral</li>
+              <li>Ausência de documentos e comprovação insuficiente</li>
+              <li>Erro na análise administrativa do INSS</li>
+              <li>Tempo de contribuição não reconhecido</li>
+              <li>Interpretação incorreta da incapacidade laboral</li>
             </ul>
           </div>
         </div>
@@ -84,14 +103,15 @@ export default function Home() {
 
       <section className="section-white">
         <div className="container faq">
-          <h2>Duvidas frequentes</h2>
+          <h2>Dúvidas frequentes</h2>
           <div className="faq-list">
             {faq.map((question) => (
               <details key={question}>
                 <summary>{question}</summary>
                 <p>
-                  Cada caso deve ser avaliado de forma individual para definir
-                  a estrategia mais segura e eficiente.
+                  Cada caso é único. Por isso, avaliamos documentos, histórico
+                  contributivo e estratégia adequada antes de indicar o próximo
+                  passo.
                 </p>
               </details>
             ))}
@@ -102,7 +122,7 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            Fale com nossa equipe
+            Tirar dúvidas no WhatsApp
           </a>
         </div>
       </section>
@@ -111,28 +131,27 @@ export default function Home() {
         <div className="container">
           <h2>Quem somos</h2>
           <p className="about-text">
-            O Escritorio Sede de Justi{"\u00e7"}a atua com atendimento consultivo e
-            estrategico para causas previdenciarias, com conducao de Bacharel
-            Victor Hugo e supervisao da Dra. Rosana.
+            O Escritório Sede de Justiça oferece atendimento consultivo e
+            estratégico em Direito Previdenciário, com condução do Bacharel
+            Victor Hugo e supervisão da Dra. Rosana.
           </p>
           <div className="cards">
             <article className="profile-card">
               <h3>Bacharel Victor Hugo</h3>
-              <p>Atendimento inicial e analise tecnica do caso</p>
-            </article>
-            <article className="profile-card">
-              <h3>Dra. Rosana</h3>
-              <p>Supervisao juridica e conducao estrategica</p>
+              <p>Análise inicial, orientação e acompanhamento técnico do caso</p>
             </article>
           </div>
+          <p className="supervision-footnote">
+            Supervisão jurídica realizada pela Dra. Rosana.
+          </p>
         </div>
       </section>
 
       <footer>
         <div className="container footer-content">
-          <strong>Escritorio Sede de Justi{"\u00e7"}a</strong>
-          <p>Contato: (11) 99999-9999</p>
-          <p>E-mail: contato@sededejustica.com.br</p>
+          <strong>Escritório Sede de Justiça</strong>
+          <p>Contato: (24) 99923-8735</p>
+          <p>E-mail: victorhla2018@gmail.com</p>
         </div>
       </footer>
     </main>
