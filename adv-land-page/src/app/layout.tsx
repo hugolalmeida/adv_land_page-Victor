@@ -13,9 +13,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Escritório Sede de Justiça | Bacharel Victor Hugo",
+  title: "Escritório de Advocacia | Analista Jurídico Victor Hugo",
   description:
-    "Landing page de atendimento previdenciário do Bacharel Victor Hugo, sob supervisão da Dra. Rosana.",
+    "Landing page de atendimento previdenciário do Analista Jurídico Victor Hugo.",
 };
 
 export default function RootLayout({
