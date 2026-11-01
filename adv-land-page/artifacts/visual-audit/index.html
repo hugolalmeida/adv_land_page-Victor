@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Victor Hugo — comparação visual</title>
+<style>
+  *{box-sizing:border-box}body{margin:0;background:#edf1f1;color:#152f39;font:16px/1.6 system-ui,sans-serif}header{padding:24px 5%;background:white;border-bottom:1px solid #cad5d7}h1{font-size:26px;margin:0 0 8px}p{margin:0 0 16px;max-width:85ch}label{margin-right:12px}select,a{font:inherit}select{padding:8px;border:1px solid #52636a;border-radius:4px;background:white}a{color:#196447;text-underline-offset:3px}main{padding:24px 4%;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}figure{margin:0;min-width:0}figcaption{padding:8px 0;font-weight:600}img{display:block;width:100%;height:auto;border:1px solid #cad5d7}a:focus-visible,select:focus-visible{outline:3px solid #9a650d;outline-offset:4px}@media(max-width:650px){main{grid-template-columns:1fr}header{padding:20px}h1{font-size:22px}}
+</style>
+<header>
+  <h1>Victor Hugo · comparação visual</h1>
+  <p>Capturas reais feitas com Playwright em 390, 768 e 1440 px. O antes usa a prévia Webpack; o depois usa a build de produção. As áreas vazias do antes foram registradas após percorrer a página e refletem o comportamento das animações de entrada.</p>
+  <label for="width">Largura</label><select id="width"><option>390</option><option>768</option><option selected>1440</option></select>
+  <label for="capture">Captura</label><select id="capture"><option value="full">Página completa</option><option value="hero">Primeira tela</option></select>
+  <p><a href="../../docs/UI-UX-AUDIT.md">Relatório de auditoria</a> · <a href="before/report.json">Resultados do antes</a> · <a href="after/report.json">Resultados finais</a></p>
+</header>
+<main>
+  <figure><figcaption>Antes</figcaption><a id="before-link" href="before/1440-full.png"><img id="before" src="before/1440-full.png" alt="Página original na largura selecionada"></a></figure>
+  <figure><figcaption>Depois</figcaption><a id="after-link" href="after/1440-full.png"><img id="after" src="after/1440-full.png" alt="Página refinada na largura selecionada"></a></figure>
+</main>
+<script>
+  const width = document.getElementById('width'), capture = document.getElementById('capture');
+  function update(){for(const phase of ['before','after']){const src=`${phase}/${width.value}-${capture.value}.png`;document.getElementById(phase).src=src;document.getElementById(`${phase}-link`).href=src;}}
+  width.addEventListener('change',update);capture.addEventListener('change',update);
+</script>
+</html>

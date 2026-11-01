@@ -2,6 +2,12 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Este projeto usa Webpack nos comandos `npm run dev` e `npm run build`.
+Neste ambiente Windows, o Turbopack apresentou falhas recorrentes com
+`Next.js package not found`. A troca de bundler mantém o Next.js e as
+funcionalidades existentes. Após atualizar os scripts, encerre o servidor antigo
+com `Ctrl+C` e execute `npm run dev` novamente.
+
 First, run the development server:
 
 ```bash
