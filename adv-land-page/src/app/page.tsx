@@ -3,6 +3,7 @@ import SiteHeader from "@/components/site-header";
 import { ArrowIcon, ContactLink, whatsappLink } from "@/components/contact-link";
 
 export default function Home() {
+  const assetBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const beneficios = [
     "Aposentadoria",
     "BPC/LOAS",
@@ -38,7 +39,7 @@ export default function Home() {
               <a className="hero-secondary" href="#atuacao">Veja como posso ajudar <ArrowIcon className="arrow-down" /></a>
             </div>
             <figure className="hero-portrait">
-              <Image src="/Victor_foto.png" alt="Victor Hugo, advogado previdenciário" fill preload sizes="(max-width: 599px) 100vw, (max-width: 899px) 85vw, 42vw" />
+              <Image src={`${assetBasePath}/Victor_foto.png`} alt="Victor Hugo, advogado previdenciário" fill preload sizes="(max-width: 599px) 100vw, (max-width: 899px) 85vw, 42vw" />
               <figcaption><strong>Victor Hugo</strong><span>Advocacia Previdenciária</span></figcaption>
             </figure>
           </div>
@@ -177,7 +178,7 @@ export default function Home() {
           <div className="container about-layout">
             <div className="about-photo-shell">
               <Image
-                src="/VictorH.jpeg"
+                src={`${assetBasePath}/VictorH.jpeg`}
                 alt="Victor Hugo, advogado previdenciário"
                 width={700}
                 height={900}

@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_BASE_PATH: /adv_land_page-Victor
     defaults:
       run:
         working-directory: adv-land-page
