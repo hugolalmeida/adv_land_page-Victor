@@ -7,7 +7,7 @@ const navigation = [
   ["#beneficios", "Benefícios"],
   ["#atuacao", "Atuação"],
   ["#duvidas", "Dúvidas"],
-  ["#sobre", "Quem somos"],
+  ["#sobre", "Sobre Victor"],
 ];
 
 export default function SiteHeader() {
@@ -66,10 +66,11 @@ export default function SiteHeader() {
           <a className="header-contact" href="#contato" onClick={() => {
             setOpen(false);
             document.getElementById("contato")?.focus({ preventScroll: true });
-          }}>Fale conosco <ArrowIcon className="arrow-up-right" /></a>
+          }}>Fale com o advogado <ArrowIcon className="arrow-up-right" /></a>
         </nav>
       </div>
       <noscript><style>{`@media(max-width:899px){.menu-toggle{display:none}.site-nav{display:flex;position:static;width:100%;border:0;padding:16px 0}.header-layout{flex-wrap:wrap}.site-header{position:relative}}`}</style></noscript>
     </header>
   );
 }
+

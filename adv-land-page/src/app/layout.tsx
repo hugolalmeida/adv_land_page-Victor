@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
@@ -13,9 +13,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Escritório de Advocacia | Analista Jurídico Victor Hugo",
+  title: "Victor Hugo | Advocacia Previdenciária",
   description:
-    "Landing page de atendimento previdenciário do Analista Jurídico Victor Hugo.",
+    "Atendimento individual em Direito Previdenciário com Victor Hugo, em Barra Mansa/RJ.",
 };
 
 export default function RootLayout({
@@ -32,3 +32,4 @@ export default function RootLayout({
     </html>
   );
 }
+

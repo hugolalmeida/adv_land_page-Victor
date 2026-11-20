@@ -24,33 +24,35 @@ export default function Home() {
         <section className="hero" id="inicio" aria-labelledby="hero-title" tabIndex={-1}>
           <div className="container hero-layout">
             <div className="hero-card">
-              <h1 id="hero-title">Seu benefício pode ser conquistado com estratégia jurídica</h1>
+              <p className="hero-kicker">Advocacia Previdenciária · Barra Mansa, RJ</p>
+              <h1 id="hero-title">Seu caso previdenciário merece atenção individual.</h1>
               <p className="description">
-                Com o apoio de nossa equipe jurídica especializada em Direito
-                Previdenciário, você terá uma análise precisa do seu caso para a
-                solicitação do benefício. E, caso ele já tenha sido negado pelo
-                INSS, adotaremos as medidas cabíveis para reverter essa decisão.
+                Victor Hugo acompanha cada etapa do seu caso previdenciário,
+                desde a análise dos documentos até a orientação sobre os caminhos
+                possíveis para solicitar um benefício ou contestar uma negativa
+                do INSS.
               </p>
               <ContactLink>
-                Falar com o analista jurídico no WhatsApp
+                Falar com Victor Hugo no WhatsApp
               </ContactLink>
-              <a className="hero-secondary" href="#atuacao">Conheça nossa atuação <ArrowIcon className="arrow-down" /></a>
+              <a className="hero-secondary" href="#atuacao">Veja como posso ajudar <ArrowIcon className="arrow-down" /></a>
             </div>
             <figure className="hero-portrait">
-              <Image src="/Victor_foto.png" alt="Victor Hugo, analista jurídico" fill preload sizes="(max-width: 599px) 100vw, (max-width: 899px) 85vw, 42vw" />
-              <figcaption><strong>Victor Hugo</strong><span>Analista Jurídico</span></figcaption>
+              <Image src="/Victor_foto.png" alt="Victor Hugo, advogado previdenciário" fill preload sizes="(max-width: 599px) 100vw, (max-width: 899px) 85vw, 42vw" />
+              <figcaption><strong>Victor Hugo</strong><span>Advocacia Previdenciária</span></figcaption>
             </figure>
           </div>
         </section>
 
         <section className="section-white benefits-section" id="beneficios" aria-labelledby="benefits-title" tabIndex={-1}>
           <div className="container">
-            <h2 id="benefits-title">Em qual benefício você precisa de apoio agora?</h2>
+            <p className="section-kicker">Atendimento individual</p>
+            <h2 id="benefits-title">Orientação previdenciária para cada etapa da sua vida</h2>
             <div className="benefit-grid">
               {beneficios.map((beneficio) => (
                 <article key={beneficio} className="benefit-card">
                   <h3>{beneficio}</h3>
-                  <ContactLink className="mini-cta" label={`Falar com a equipe sobre ${beneficio}`}>Falar com a equipe</ContactLink>
+                  <ContactLink className="mini-cta" label={`Conversar sobre ${beneficio}`}>Saiba como posso ajudar</ContactLink>
                 </article>
               ))}
             </div>
@@ -59,7 +61,8 @@ export default function Home() {
 
         <section className="section-blue" id="atuacao" aria-labelledby="practice-title" tabIndex={-1}>
           <div className="container">
-            <h2 id="practice-title">Casos em que atuamos no Direito Previdenciário</h2>
+            <p className="section-kicker">Atuação</p>
+            <h2 id="practice-title">Acompanhamento jurídico previdenciário, feito de perto</h2>
           </div>
           <div className="container split">
             <div>
@@ -86,7 +89,7 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h2>Motivos que levam o INSS a negar benefícios</h2>
+              <h2>Teve um benefício negado pelo INSS?</h2>
 
               <div className="reason-accordion">
                 <details>
@@ -157,7 +160,7 @@ export default function Home() {
                 <details key={question}>
                   <summary>{question}</summary>
                   <p>
-                    Cada caso é único. Por isso, avaliamos documentos, histórico
+                    Cada caso é único. Por isso, Victor analisa documentos, histórico
                     contributivo e estratégia adequada antes de indicar o próximo
                     passo.
                   </p>
@@ -175,7 +178,7 @@ export default function Home() {
             <div className="about-photo-shell">
               <Image
                 src="/VictorH.jpeg"
-                alt="Foto do Analista Jurídico Victor Hugo"
+                alt="Victor Hugo, advogado previdenciário"
                 width={700}
                 height={900}
                 sizes="(max-width: 599px) 90vw, (max-width: 899px) 60vw, 35vw"
@@ -183,26 +186,24 @@ export default function Home() {
               />
             </div>
             <div>
-              <h2 id="about-title">Quem somos</h2>
+              <p className="section-kicker">Sobre</p>
+              <h2 id="about-title">Atendimento próximo, com Victor Hugo</h2>
               <p className="about-text about-text-left">
-                Somos um escritório de advocacia dedicado a oferecer um
-                atendimento jurídico responsável, transparente e alinhado às
-                necessidades de cada cliente. Atuamos com compromisso, técnica e
-                ética, buscando sempre soluções eficazes e seguras para a defesa
-                de direitos e prevenção de conflitos.
+                Victor Hugo oferece atendimento previdenciário individual,
+                responsável e transparente. Cada caso começa com escuta e análise
+                cuidadosa da documentação e do histórico de contribuição.
               </p>
               <p className="about-text about-text-left">
-                Com uma equipe preparada e focada na excelência, nosso escritório
-                atua para proporcionar tranquilidade, orientação adequada e
-                resultados consistentes, sempre preservando os princípios da
-                justiça e da integridade profissional.
+                A orientação é clara e alinhada à situação de cada pessoa, com
+                acompanhamento próximo nas etapas do pedido ou na análise de uma
+                negativa do INSS.
               </p>
               <div className="cards">
                 <article className="profile-card">
-                  <h3>Analista Jurídico Victor Hugo</h3>
+                  <h3>Victor Hugo · Advocacia Previdenciária</h3>
                   <p>
-                    Análise inicial, orientação estratégica e acompanhamento do
-                    seu caso do início ao fim.
+                    Análise inicial, explicação dos próximos passos e
+                    acompanhamento individual do seu caso.
                   </p>
                 </article>
               </div>
@@ -213,7 +214,8 @@ export default function Home() {
       </main>
       <footer id="contato" aria-labelledby="contact-title" tabIndex={-1}>
         <div className="container footer-content">
-          <h2 id="contact-title">Fale Conosco</h2>
+          <p className="section-kicker">Atendimento individual</p>
+          <h2 id="contact-title">Converse com Victor Hugo</h2>
           <p><a className="footer-phone" href="tel:+5524999238735">(24) 99923-8735</a></p>
           <p>Rua Elpides Dias Marciel, 285, Paraíso, Barra Mansa/RJ.</p>
           <p><a href="mailto:victorhla2018@gmail.com">victorhla2018@gmail.com</a></p>
@@ -241,3 +243,4 @@ export default function Home() {
     </>
   );
 }
+
