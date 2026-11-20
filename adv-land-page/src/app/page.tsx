@@ -3,7 +3,11 @@ import SiteHeader from "@/components/site-header";
 import { ArrowIcon, ContactLink, whatsappLink } from "@/components/contact-link";
 
 export default function Home() {
-  const assetBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const assetBasePath =
+    process.env.GITHUB_ACTIONS === "true" &&
+    process.env.GITHUB_REPOSITORY === "hugolalmeida/adv_land_page-Victor"
+      ? "/adv_land_page-Victor"
+      : "";
   const beneficios = [
     "Aposentadoria",
     "BPC/LOAS",
