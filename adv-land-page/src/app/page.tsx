@@ -225,7 +225,13 @@ export default function Home() {
           <p>Rua Elpides Dias Marciel, 285, Paraíso, Barra Mansa/RJ.</p>
           <p><a href="mailto:victorhla2018@gmail.com">victorhla2018@gmail.com</a></p>
         </div>
-          <div className="container footer-bottom"><span>Victor Hugo · Advocacia Previdenciária</span><a href="#inicio">Voltar ao início <ArrowIcon className="arrow-up" /></a></div>
+          <div className="container footer-bottom">
+            <span>Victor Hugo · Advocacia Previdenciária</span>
+            <a href="https://hugolalmeida.github.io/hugo-almeida-portfolio/" target="_blank" rel="noopener noreferrer">
+              Feito por Hugo L. Almeida
+            </a>
+            <a href="#inicio">Voltar ao início <ArrowIcon className="arrow-up" /></a>
+          </div>
       </footer>
 
       <a
